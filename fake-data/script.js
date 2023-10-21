@@ -5,6 +5,19 @@ const products = [
     imgUrl:
       "https://www.bakuelectronics.az/assets/cache_image/products/138484/lenovo-156-fhdi3-1215u8gb512gb-ssdfreedosarctic-grey-82rk00purk-n-1_260x204_adf.jpg",
     price: "799 AZN",
+    productInfo: `Lenovo Ideapad
+      L340-15IWL: 
+      İşlemci: Intel Core i3 8145U (2.10 GHz, Turbo Boost ile 3.90 GHz)
+      Bellek: 4 GB DDR4 2400 MHz (1 x 4 GB) 
+      Depolama: 1 TB 5400 rpm SATA HDD 
+      Optik Sürücü: DVD yazıcı 
+      Ekran: 15.6 inç HD (1366 x 768) çözünürlük
+      Grafik Kartı: NVIDIA GeForce MX110 2 GB GDDR5 
+      Bağlantı: 10/100/1000 Mbps Ethernet, Wi-Fi, Bluetooth 
+      Pil: 3 hücreli, 36Wh, Ağırlık: 2.10 kg
+      İşletim Sistemi: FreeDOS 
+      Garanti: Bir yıl süresince 
+      Renk: Siyah`,
   },
   {
     id: 2,

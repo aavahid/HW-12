@@ -20,6 +20,12 @@ products.forEach((p) => {
   const favoriteIcon = document.createElement("img");
   favoriteIcon.src = "../assets/svg/favorite.svg";
 
+  detailIcon.addEventListener("click", () => {
+    window.open(
+      `http://127.0.0.1:5500/pages/product-detail/index.html?product_id=${p.id}`,
+      "_self"
+    );
+  });
   iconContainer.append(cartIcon, favoriteIcon, detailIcon);
 
   productDiv.append(productImg, productName, productPrice, iconContainer);

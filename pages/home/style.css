@@ -3,9 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  background-color: rgba(242, 217, 183, 0.822);
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+  --background-color: rgba(242, 217, 183, 0.822);
 }
+body {
+  background-color: var(--background-color);
+}
+
 .container {
   width: 1280px;
   margin: auto;
@@ -13,7 +19,8 @@ body {
 }
 
 #topbar-container {
-  background-color: wheat;
+  background-color: var(--primary-color);
+  color: white;
   position: fixed;
   overflow: hidden;
   width: 100%;
@@ -26,29 +33,38 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .navbar h1 {
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.navbar h1:hover,
+
 #cart img:hover,
-#favorite img:hover {
+#favorite img:hover,
+.left-side img:hover {
   transform: scale(1.25);
 }
+
 .left-side img {
   width: 400px;
   height: 80px;
   border: 2px solid green;
 }
+
 #right-side {
   display: flex;
   gap: 30px;
 }
+
 #right-side img {
   width: 25px;
 }
-h1 {
-  font-size: 25px;
+
+.navbar h1 {
+  cursor: pointer;
+  font-size: 28px;
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 #cart,
@@ -57,13 +73,14 @@ h1 {
   position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
 }
+
 .badge {
   min-width: 16px;
   min-height: 16px;
   position: absolute;
   right: -10px;
   top: -10px;
-  background-color: rgb(250, 58, 58);
+  background-color: var(--secondary-color);
   border-radius: 50px;
   font-size: 12px;
   color: white;
@@ -83,9 +100,10 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
 #product-section > div > .product-container > .product {
-  background-color: rgb(202, 235, 84);
-  border: 1px solid green;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   max-width: fit-content;
   max-height: fit-content;
@@ -95,8 +113,8 @@ h1 {
 
 .product-container > .product:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 #product-section > div > .product-container > .product img {
   max-width: fit-content;
   max-height: 204px;
