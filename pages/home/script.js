@@ -2,6 +2,8 @@ const productContainer = document.querySelector(
   "#product-section > div > .product-container"
 );
 
+const favoriteCounts = {};
+
 products.forEach((p) => {
   const productDiv = document.createElement("div");
   productDiv.className = "product";
@@ -19,6 +21,16 @@ products.forEach((p) => {
   cartIcon.src = "../assets/svg/cart.svg";
   const favoriteIcon = document.createElement("img");
   favoriteIcon.src = "../assets/svg/favorite.svg";
+  const topCartIcon = document.querySelector("#cart img");
+  const topFavtIcon = document.querySelector("#favorite img");
+
+  topCartIcon.addEventListener("click", () => {
+    window.open("http://127.0.0.1:5500/pages/cart/index.html", "_self");
+  });
+
+  topFavtIcon.addEventListener("click", () => {
+    window.open("http://127.0.0.1:5500/pages/favorite/index.html", "_self");
+  });
 
   detailIcon.addEventListener("click", () => {
     window.open(
@@ -26,6 +38,7 @@ products.forEach((p) => {
       "_self"
     );
   });
+
   iconContainer.append(cartIcon, favoriteIcon, detailIcon);
 
   productDiv.append(productImg, productName, productPrice, iconContainer);

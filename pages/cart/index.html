@@ -3,32 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fake Trading Home Page</title>
-    <script defer src="../../fake-data/script.js"></script>
-    <script defer src="./script.js"></script>
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <script defer src="../../fake-data/script.js"></script>
+    <title>Shopping Cart</title>
   </head>
   <body>
     <header id="topbar-container">
       <div class="navbar container">
-        <h1>Fake Trading</h1>
+        <div class="left-side">
+          <img src="../assets/svg/home-page.svg" alt="Home Icon" />
+          <h1>Fake Trading</h1>
+        </div>
         <span id="right-side">
           <div id="cart">
             <img src="../assets/svg/cart.svg" alt="Cart Icon" />
-            <span class="badge"></span>
+            <span class="badge">0</span>
           </div>
           <div id="favorite">
             <img src="../assets/svg/favorite.svg" alt="Favorite Icon" />
-            <span class="badge"></span>
+            <span class="badge">0</span>
           </div>
         </span>
       </div>
     </header>
-    <main id="product-section">
-      <div class="container">
-        <h1>Products</h1>
-        <div class="product-container"></div>
-      </div>
-    </main>
+    <div id="added-cart">
+      <h1>Shopping Cart</h1>
+    </div>
   </body>
 </html>
